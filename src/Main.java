@@ -1,32 +1,48 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        /*System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");*/
-        //31st august
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Напишите цифру 1 чтобы начать и потом продолжать: ");
+        int num = sc.nextInt();
 
-        
-        int i = 32;
-        short sh = 49;
-        byte b = 9;
-        char a = 'a';
-        long l = 241;
-        double doub = 7.135;
-        float fl = 8.351F;
+        switch (num) {
+            case 1 -> System.out.println("Взять нужное: Турка, сахар, молотые зёрна, вода");
+            default -> System.out.println("Нет. Именно цифру 1");
+        }
+        System.out.print("Напишите цифру 1, чтобы продолжить: ");
+        int numb = sc.nextInt();
+        switch (numb) {
+            case 1 -> System.out.println("Смешивание ингридиентов: Залить водой зёрна, добавить сахар");
+            default -> System.out.println("Нет. Именно цифру 1");
+        }
+        System.out.print("Напишите цифру 1, чтобы продолжить: ");
+        int n = sc.nextInt();
+        switch (n) {
+            case 1 -> System.out.println("Начинаем варить напиток помешивая");
+            default -> System.out.println("Нет. Именно цифру 1");
+        }
+        System.out.print("Напишите цифру 1, чтобы продолжить: ");
+        int nu = sc.nextInt();
+        switch (nu) {
+            case 1 ->
+                    System.out.println("Добавить добавки? Например сироп, молоко, сливки. Напишите 1, чтобы продолжить: ");
+            default -> System.out.println("Нет. Именно цифру 1");
+        }
+        System.out.print("Напишите 1 если да, 2 если нет, чтобы продолжить: ");
+        int answer = sc.nextInt();
+        switch (answer) {
+            case 1 -> System.out.println("Добавляем и завершаем приготовление  \nНажмите 1 чтобы завершить: ");
+            case 2 -> System.out.println("Поздравляю! Ваш кофе готов!");
+            default -> System.out.println("Нет. Используйте только цифры 1 и 2");
+        }
+        int ans = sc.nextInt();
 
-        int fst = 12;
-        int scnd = 4;
-
-        int sum = fst + scnd; //сложение
-        int diff = fst - scnd; //вычитание
-        int product = fst * scnd; //умножение
-        int quotient = fst / scnd; //деление
-        int remind = fst % scnd; //остаток от деления
-
-        System.out.println("Сложение: " + sum);
-        System.out.println("Вычитание: " + diff);
-        System.out.println("Умножение: " + product);
-        System.out.println("Деление: " + quotient);
-        System.out.println("Остаток от деления: " + remind);
+        if (ans == 1) {
+            System.out.println("Поздравляю! Ваш кофе готов!");
+        } else {
+            System.out.println(" ");
         }
     }
+}
+        

@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //first_task();
-        //second_task();
+        first_task();
+        second_task();
         third_task();
     }
 
@@ -37,5 +37,7 @@ public class Main {
     static void third_task() {
         String[] words = new String[]{"Java", "Programming", "Git"};
         System.out.println(Arrays.toString(Methods.getCornerValuesArray(words)));
+        System.out.println(Arrays.toString(Methods.getCornerValuesArray(3, 4, 1, -2, 2)));
+        System.out.println(Arrays.toString(Methods.getCornerValuesArray('9', 'b', '1', '!')));
     }
 }

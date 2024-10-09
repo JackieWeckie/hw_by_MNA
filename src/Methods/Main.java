@@ -5,9 +5,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        first_task();
-        second_task();
-        third_task();
+//        first_task();
+//        second_task();
+//        third_task();
+        recursion();
+        factorial();
     }
 
     static void first_task() {
@@ -39,5 +41,25 @@ public class Main {
         System.out.println(Arrays.toString(Methods.getCornerValuesArray(words)));
         System.out.println(Arrays.toString(Methods.getCornerValuesArray(3, 4, 1, -2, 2)));
         System.out.println(Arrays.toString(Methods.getCornerValuesArray('9', 'b', '1', '!')));
+    }
+
+    static void recursion() {
+        //* Корнер-кейсы */
+
+        String[] array1 = new String[]{};
+        String[] array2 = new String[]{"A"};
+        String[] array3 = new String[]{"Java", "Java", "Java", "Java"};
+
+        System.out.println(Arrays.toString(Methods.getCornerCases(array1)));
+        System.out.println(Arrays.toString(Methods.getCornerCases(array2)));
+        System.out.println(Arrays.toString(Methods.getCornerCases(array3)));
+    }
+
+    static void factorial() {
+        //* Нахождение факториала */
+
+        System.out.println(Methods.getFactorial(3));
+        System.out.println(Methods.getFactorial(5));
+        System.out.println(Methods.getFactorial(7));
     }
 }

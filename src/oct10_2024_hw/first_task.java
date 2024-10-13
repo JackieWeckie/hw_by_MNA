@@ -7,9 +7,9 @@ public class first_task {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-        sum_arr(arr);
-        line_arr(arr);
-        chart_arr(arr);
+        outputArr(arr);
+        printLineArr(arr);
+        printChartArr(arr);
     }
 
 
@@ -19,7 +19,7 @@ public class first_task {
      * @param arr
      */
 
-    static void sum_arr(int[][] arr) {
+    static void outputArr(int[][] arr) {
         int n = 1;
 
         for (int i = 0; i < arr.length; i++) {
@@ -36,7 +36,7 @@ public class first_task {
      * @param arr
      */
 
-    static void line_arr(int[][] arr) {
+    static void printLineArr(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             int j = 0;
             for (int n = 0; n < arr.length; n++) {
@@ -52,7 +52,7 @@ public class first_task {
      * @param arr
      */
     
-    static void chart_arr(int[][] arr) {
+    static void printChartArr(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             int n = 0;
             for (int j = 0; j < arr.length; j++) {

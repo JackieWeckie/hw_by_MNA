@@ -4,26 +4,23 @@ public class Author {
     private String name;
     private String surname;
 
-    public Author(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-
-    public String getName(String name) {
+    public String getName() {
         return name;
     }
 
-    public String getSurname(String surname) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
         return surname;
     }
 
-    public String setName() {
-        this.name = name;
-        return null;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public String setSurname() {
-        this.surname = surname;
-        return null;
+    public String getAuthorInfo() {
+        return getName() + " " + getSurname();
     }
 }

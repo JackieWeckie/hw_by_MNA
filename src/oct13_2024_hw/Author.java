@@ -4,6 +4,14 @@ public class Author {
     private String name;
     private String surname;
 
+    public Author() {
+    }
+
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
     public String getName() {
         return name;
     }
@@ -20,7 +28,8 @@ public class Author {
         this.surname = surname;
     }
 
-    public String getAuthorInfo() {
-        return getName() + " " + getSurname();
+    @Override
+    public String toString() {
+        return "Author's name: " + name + "\nAuthor's surname: " + surname;
     }
 }

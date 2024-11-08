@@ -8,7 +8,6 @@ public class Player {
     private boolean isTired = false;
     static final private int MAX_STAMINA = 10;
     static final private int MIN_STAMINA = 0;
-    static final private int MAX_AMOUNT_OF_PLAYERS = 6;
     static int playerCount = 0;
     static int tiredPlayerCount = 0;
 
@@ -17,14 +16,6 @@ public class Player {
         this.playerId = playerCount;
         Random rnd = new Random();
         this.stamina = rnd.nextInt(1, 10);
-    }
-
-    public static Player addNewPlayer() {
-        if (playerCount - tiredPlayerCount < MAX_AMOUNT_OF_PLAYERS) {
-            return new Player();
-        } else {
-            return null;
-        }
     }
 
     public int getStamina() {
@@ -49,15 +40,6 @@ public class Player {
             } else {
                 System.out.println("Player " + getPlayerId() + " got tired");
             }
-        }
-    }
-
-    public static void info() {
-        if (playerCount - tiredPlayerCount >= MAX_AMOUNT_OF_PLAYERS) {
-            System.out.println("There's no vacant cells to play!");
-        } else {
-            System.out.println("The team isn't filled. There's " + (MAX_AMOUNT_OF_PLAYERS - (playerCount
-                    - tiredPlayerCount)) + " vacant cells.");
         }
     }
 }

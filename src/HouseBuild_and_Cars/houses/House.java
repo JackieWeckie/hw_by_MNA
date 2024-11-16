@@ -1,4 +1,6 @@
-package oct31_2024_HouseBuild;
+package HouseBuild_and_Cars.houses;
+
+import java.util.Objects;
 
 public class House {
     private final int floorAmount;
@@ -13,7 +15,7 @@ public class House {
 
     @Override
     public String toString() {
-        return "This house has " + floorAmount + " floors, " +
+        return "\nThis house has " + floorAmount + " floors, " +
                 roomAmount + " rooms and " +
                 ((hasGarage) ? "" : "doesn't ") + "has garage";
     }
@@ -41,5 +43,18 @@ public class House {
         public House build() {
             return new House(this);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        House house = (House) o;
+        return floorAmount == house.floorAmount && roomAmount == house.roomAmount && hasGarage == house.hasGarage;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(floorAmount, roomAmount, hasGarage);
     }
 }

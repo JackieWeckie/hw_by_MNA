@@ -19,6 +19,7 @@ public class MapReverse {
         map.put(1, "C");
         map.put(2, "B");
         map.put(3, "A");
+        //изменён порядок ключей
 
         Map<String, Integer> reversedMap = reversedMap(map);
 

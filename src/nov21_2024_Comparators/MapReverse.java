@@ -16,9 +16,10 @@ public class MapReverse {
 
     public static void main(String[] args) {
         Map<Integer, String> map = new LinkedHashMap<>();
-        map.put(1, "A");
+        map.put(1, "C");
         map.put(2, "B");
-        map.put(3, "C");
+        map.put(3, "A");
+        //изменён порядок ключей
 
         Map<String, Integer> reversedMap = reversedMap(map);
 

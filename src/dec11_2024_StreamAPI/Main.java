@@ -12,6 +12,8 @@ public class Main {
                 "Java Programming For Game Developing", true);
         Book book5 = new Book(620122, "Michael Kofler", "Java", true);
         Book book6 = new Book(338519, "Herbert Schildt", "Java: A beginner's guide", false);
+        Book book7 = new Book(152984, "Wladston Ferreira Filho",
+                "Computer Science Distilled", true);
 
         Library library = new Library();
         library.addBook(book1);
@@ -20,6 +22,7 @@ public class Main {
         library.addBook(book4);
         library.addBook(book5);
         library.addBook(book6);
+        library.addBook(book7);
 
         List bookList = library.getBook();
 
@@ -31,5 +34,10 @@ public class Main {
         System.out.println(library.getBook(book2));
         System.out.println(library.getAuthor());
         System.out.println(library.bookAmount());
+        System.out.println("\n" + library.partitioningByAvailable());
+        System.out.println(library.bookAmount(false));
+        System.out.println(library.bookAmount(true));
+        System.out.println(library.getAuthor());
+        System.out.println(library.partitioningByAuthor());
     }
 }
